@@ -1,0 +1,7 @@
+# Remove Test Files
+tests/
+# Remove Lock files
+yarn.lock
+package-lock.json
+# Stuff
+build/

@@ -1,0 +1,15 @@
+{
+  "name": "wingman",
+  "description": "Tools to use in your code so you don't have to copy it from online.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "none",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "keywords": [
+    "tools"
+  ],
+  "author": "CryptosByte"
+}
