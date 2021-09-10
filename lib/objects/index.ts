@@ -15,3 +15,24 @@ export const ReverseObjectKeyValue = (obj: SupportedObjectType) => {
 
   return newObject;
 };
+
+/**
+ * Fetches value from object using Dot Notation.
+ * @param {Object} obj 
+ * @param {string} path 
+ * @returns {*} 
+ */
+export const GetValueFromPath = (obj: object, path: string) => {
+  path = path.replace(/\[(\w+)\]/g, ".$1");
+  path = path.replace(/^\./, "");
+
+  const pathSplitted = path.split(".");
+  for (var i: number = 0, n: number = pathSplitted.length; i < n; ++i) {
+    var key: any = pathSplitted[i];
+    if (key in obj) 
+      //@ts-ignore
+      obj = obj[key];
+    else return;
+  }
+  return obj;
+};

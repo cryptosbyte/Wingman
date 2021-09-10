@@ -24,3 +24,21 @@ export const FilterExact = (array: any[], filter: any) => {
 export const LoopFunction = (maxLoops: number, givenFunc: Function) => {
   return [...Array(maxLoops)].forEach(() => givenFunc());
 };
+
+/**
+ * Converts an array into an object
+ * @param {*[]} array
+ * @returns object
+ */
+export const ArrayToObject = (array: any[]) => {
+  let i: number = 0;
+  let object: object = {};
+
+  for (const index of array) {
+    //@ts-ignore
+    object[i] = index;
+    i++;
+  }
+
+  return object;
+};
